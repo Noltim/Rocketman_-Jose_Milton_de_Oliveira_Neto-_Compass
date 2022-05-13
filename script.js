@@ -226,18 +226,123 @@
 // console.log(corPerfil);
 
 //-------trocando valor (mini-projeto)--------
+// feito em um projeto separado
 
+//----------if...else------------
+// if...else....
+// switch....case
 
+//Se a hora estiver entre 06:00 até 12:00: Bom dia!
+// se estiver entre 12:00 até 18:00: Boa tarde!
+//Caso contrário: Boa noite!
 
+// let hora = 10;
 
+// if(hora > 6 && hora < 12){
+//     console.log('Bom dia!')
+// }else if(hora > 12 && hora < 18){
+//     console.log('Boa tarde!')
 
+// }else{
+//     console.log('Boa noite!')
+// }
 
+//---------Switch case---------
+// let permissao; //comum,gerente,diretor
 
+// switch(permissao){
+//     case 'comum':
+//         console.log('Usuário comum');
+//         break;
+//     case 'gerente':
+//         console.log('Usuário gerente');
+//         break;
+//     case 'direto':
+//         console.log('Usuário diretor');
+//         break;
+//     default:
+//         console.log('Usuário não reconhecido!')
 
+// }
 
+//--------laço/loop for----------------
 
+//1.for
+//2.While
+//3.Do...While
+//4. For..in
+//5 for..of
 
+// for(let i = 0; i < 5; i++) {
+//     console.log('Estou aprendendo!')
+// }
+// for(let i = 0; i < 5; i++) {
+//     if(i % 2 !==0){
+//         console.log(i)
+//     }
+// }
 
+// for(let i = 5; i > 0; i--) {
+//     if(i % 2 !==0){
+//         console.log(i)
+//     }
+// }
+
+//--------laço/loop while-------
+
+// while loop
+//  let i = 5;
+
+// while (i > 0){
+//      if(i % 2 !==0){
+//      console.log(i)
+//      }
+//      i--;
+//  }
+
+//---------laço Do ... while-------
+// do.. while - executa ao menos 1 vez
+// let i = 0;
+// do{
+//     console.log('digitando!',i)
+//     i++;
+// }while(i<10);
+
+//---------laço for...in----------
+// const pessoa = {
+//     nome: 'Milton',
+//     idade: 25
+// };
+// //key-value ex: nome é a key e Milton o valor
+// for( let chave in pessoa){
+//     console.log(chave, pessoa['nome']); // pode acessar por
+//     // pessoa.nome (se souber o nome dos atributos)
+// };
+
+// const cores = [ 'Vermelhor', 'Azul', 'Verde'];
+
+// for(let indice in cores){
+//     console.log(indice, cores[indice])
+// }
+
+//----------laço for of------------
+
+// const cores = [ 'Vermelhor', 'Azul', 'Verde'];
+
+// for(let cor of cores){
+//     console.log(cor)
+// }
+
+//teste
+
+// const lista = [ 'Feijao', 'Arroz', 'Macarrao', 'Fuba'];
+
+// for (const itens of lista) {
+//     console.log(itens);
+// };
+
+//----- mini projeoto 3
+//------mini projeto 4
 
 
 
