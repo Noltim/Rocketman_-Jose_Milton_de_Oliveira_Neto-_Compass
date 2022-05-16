@@ -837,19 +837,66 @@
 // console.log(clone);
 
 //----------------Foreach-------------
+// JS aula 56 iterando um array
+
+// const numeros = [1,2,3,4,5];
+
+
+// //podemos interar sobre o array usando:
+
+// for(numero of numeros){
+//     console.log(numero);
+// }
+
+// //Atualmente temos um modelo mais facil
+// //metodo foreach
+
+// numeros.forEach(function(numero){
+//     console.log("Modelo ForEach full",numero);
+// });
+
+// //forma reduziada por arrow function
+
+// numeros.forEach((numero) => console.log("Modelo ForEach reduzido por arrow function",numero));
+
+// //É possivel incrementar ainda mais isso dessa forma
+
+// numeros.forEach((numero,indice) => console.log(indice,"Modelo ForEach reduzido por arrow function",numero));
 
 
 
+//--------------Combinando array---------------
+// //"modificando internamente ele"
 
+// const numeros = [1,2,3,4,5];
 
+// const combinado = numeros.join("-");
+// console.log(combinado);
 
+// const frase = "olá bem vindo ao curso";
+// const resultado = frase.split(' ');
+// console.log(resultado);
 
+// console.log(resultado.join('-'));
 
+// //slug é o URL com traços como espaço
 
+// ------------ INPUT ----------------
+//recebendo informações do usuario
 
+// // prompt('Mensagem que vai passar ao usuario para digitar')
+// // para guardar o resultado digitado é preciso por em uma variavel
+// //exemplo
+// let corFavorita = prompt("Digite aqui sua cor: ");
 
+// //usando a variavel que guardou valor
 
+// if (corFavorita = "rosa"){
+//     alert("Essa é minha cor também!")
+// }
 
+//-------------DOM-----------
+//é todo HTML que esta em uma pagina
 
 
 
