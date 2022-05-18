@@ -84,10 +84,11 @@ describe('Testes de radicação', () => {
         let resultado = Calculadora.rad(-36, 2)
         expect(resultado).to.be.eq("Não é possível extrair raiz quadrada de um número negativo no conjunto dos números reais.")
     })
-    // it.only('A raiz 5 de -32 resultando em 2', () => {
-    //     let resultando = Calculadora.rad(-32, 5);
-    //     expect(resultando).to.be.eq(-2);
-    // }) --------------- verificar pq esta dando NAN------------------------
+    it('A raiz 5 de -32 resultando em -2', () => {
+        let resultando = Calculadora.rad(-32, 5);
+        console.log(Calculadora.rad(-32, 5))
+        expect(resultando).to.be.eq("Não é possível extrair raiz quadrada de um número negativo no conjunto dos números reais.")
+    }) //--------------- verificar pq esta dando NAN------------------------ PS mesmo usando função do JS fica dando NAN
 })
 describe('Teste de retorno do maior, menor ou  igual', () => {
     it('Quando ambos os números iguais retornar igual', () => {
@@ -96,7 +97,6 @@ describe('Teste de retorno do maior, menor ou  igual', () => {
     })
     it('Quando primeiro for menor que o segundo retornar o segundo', () => {
         let resultado = Calculadora.comparar(5, 6)
-        console.log(Calculadora.comparar(5, 6))
         expect(resultado).to.be.eq(6)
     })
     it('Quando primeiro for maior que o segundo retornar o primeiro', () => {
@@ -108,6 +108,13 @@ describe('Teste de calculo do raio', () => {
     it('Quando a circunferência for 3 o raio  será 0.47770700636942676', () => {
         let resultado = Calculadora.raio(3)
         expect(resultado).to.be.eq(0.47770700636942676)
+    })
+})
+describe('Teste de calcular a area', function (){
+    it('A area deve ser de ', function () {
+        let resultado = Calculadora.area(3)
+        expect(resultado).to.be.equals(28.26)
+
     })
 })
 describe('Teste  de array', () => {
@@ -127,13 +134,7 @@ describe('Teste de data', function () {
     })
 
 })
-describe('', function () {
-    it.only('', () => {
-       
-        
-    })
 
-})
 
 
 

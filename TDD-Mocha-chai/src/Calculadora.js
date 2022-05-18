@@ -20,11 +20,11 @@ export default class Calculadora {
         return a ** b;
     };
 
-    static rad(a, b) {
-        if (a < 0 && b % 2 == 0 || b < 0) {
+    static rad(b, i) {
+        if (b < 0){ // && i % 2 == 0 || i < 0) { -----> tive que retirar por conta de um erro no JS
             return "Não é possível extrair raiz quadrada de um número negativo no conjunto dos números reais."
         } else {
-            return (a ** (1 / b));
+            return Math.pow (b, 1.0 / i); //(b ** (1/i)) tentei usar uma função do Js mesmo para retirar o erro, mas nao foi
         }
     };
 
@@ -38,17 +38,21 @@ export default class Calculadora {
         }
     }
 
-    static raio(c) {
-        return (c / (2 * 3.14))
+    static raio(r) {
+        return (r / (2 * 3.14))
+    }
+
+    static area(r){
+        return  (3.14*(r**2))
     }
 
     static array(a, b, c) {
         return [a, b, c]
     }
 
-    static data(a, b, c) {
+    static data(a, m, d) {
         const now = new Date(); // Data de hoje
-        const past = new Date(a, b, c); // Outra data no passado
+        const past = new Date(a, m, d); // Outra data no passado
         const diff = Math.abs(now.getTime() - past.getTime()); // Subtrai uma data pela outra
         const days = Math.ceil(diff / (1000 * 60 * 60 * 24)); // Divide o total pelo total de milisegundos correspondentes a 1 dia. (1000 milisegundos = 1 segundo).
 
