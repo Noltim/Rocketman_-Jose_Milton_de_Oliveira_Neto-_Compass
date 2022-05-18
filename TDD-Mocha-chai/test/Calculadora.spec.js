@@ -112,18 +112,28 @@ describe('Teste de calculo do raio', () => {
 })
 describe('Teste  de array', () => {
     it('O resultado deve ser um array e não conter o número 3', () => {
-        let  resultado = Calculadora.array(4,2,5)
-    expect(resultado).to.be.an('array').that.does.not.include(3);
+        let resultado = Calculadora.array(4, 2, 5)
+        expect(resultado).to.be.an('array').that.does.not.include(3);
+    })
+    it('O array está disposto na ordem solicitada [4,2,5]', () => {
+        let resultado = Calculadora.array(4, 2, 5)
+        expect(resultado).to.have.ordered.members([4, 2, 5]).but.not.have.ordered.members([5, 2, 1]);
     })
 })
-// describe('Teste de data',function(){
-//     it('Calcula a diferença de uma data passa para atual',()=>{
-//         let resultado = Calculadora.data(2010,07,05)
-//         console.log(Calculadora.data(2010,07,05))
-//         expect(resultado).to.be.eq(days)
-//     })
+describe('Teste de data', function () {
+    it('Calcula a diferença de uma data passa para atual em dias', () => {
+        let resultado = Calculadora.data("2010", "07", "05")
+        expect(resultado).to.be.eq(4305 + " Dias")
+    })
 
-// })
+})
+describe('', function () {
+    it.only('', () => {
+       
+        
+    })
+
+})
 
 
 
