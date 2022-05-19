@@ -33,6 +33,7 @@ describe('Testes de subtração', () => {
         expect(resultado).to.be.eq(9)
     })
 })
+
 describe('Testes de multiplicação', () => {
     it('Deve multiplicar 4 e 5 resultando em 20', () => {
         let resultando = Calculadora.mult(4, 5);
@@ -47,6 +48,7 @@ describe('Testes de multiplicação', () => {
         expect(resultado).to.be.eq(-20)
     })
 })
+
 describe('Testes de divisão', () => {
     it('Deve dividir 4 e 5 resultando em 0.8', () => {
         let resultando = Calculadora.div(4, 5);
@@ -60,7 +62,16 @@ describe('Testes de divisão', () => {
         let resultado = Calculadora.div(4, -5)
         expect(resultado).to.be.eq(-0.8)
     })
+    it('Deve dividir 4 e -5 resultado em não é possivel', () => {
+        let resultado = Calculadora.div(4, 0)
+        expect(resultado).to.be.eq("não é possivel dividir por 0")
+    })
+    it('Deve dividir -5.5 e 3 resultado é -1.8333333333333333', () => {
+        let resultado = Calculadora.div(-5.5, 3)
+        expect(resultado).to.be.eq(-1.8333333333333333)
+    })
 })
+
 describe('Testes de potencia', () => {
     it('a base 4 com expoente 5 resultando em 1024', () => {
         let resultando = Calculadora.pot(4, 5);
@@ -70,11 +81,12 @@ describe('Testes de potencia', () => {
         let resultado = Calculadora.pot(-4, 5);
         expect(resultado).to.be.eq(-1024);
     })
-    it('Deve dividir 4 e -5 resultando em 0.0009765625', () => {
+    it('a base 4 com expoente -5 resultando em 0.0009765625', () => {
         let resultado = Calculadora.pot(4, -5)
         expect(resultado).to.be.eq(0.0009765625)
     })
 })
+
 describe('Testes de radicação', () => {
     it('A raiz 5 de 32 resultando em 2', () => {
         let resultando = Calculadora.rad(32, 5);
@@ -90,6 +102,7 @@ describe('Testes de radicação', () => {
         expect(resultando).to.be.eq("Não é possível extrair raiz quadrada de um número negativo no conjunto dos números reais.")
     }) //--------------- verificar pq esta dando NAN------------------------ PS mesmo usando função do JS fica dando NAN
 })
+
 describe('Teste de retorno do maior, menor ou  igual', () => {
     it('Quando ambos os números iguais retornar igual', () => {
         let resultado = Calculadora.comparar(6, 6)
@@ -104,12 +117,14 @@ describe('Teste de retorno do maior, menor ou  igual', () => {
         expect(resultado).to.be.eq(10)
     })
 })
+
 describe('Teste de calculo do raio', () => {
     it('Quando a circunferência for 3 o raio  será 0.47770700636942676', () => {
         let resultado = Calculadora.raio(3)
         expect(resultado).to.be.eq(0.47770700636942676)
     })
 })
+
 describe('Teste de calcular a area', function (){
     it('A area deve ser de ', function () {
         let resultado = Calculadora.area(3)
@@ -117,6 +132,7 @@ describe('Teste de calcular a area', function (){
 
     })
 })
+
 describe('Teste  de array', () => {
     it('O resultado deve ser um array e não conter o número 3', () => {
         let resultado = Calculadora.array(4, 2, 5)
@@ -127,6 +143,7 @@ describe('Teste  de array', () => {
         expect(resultado).to.have.ordered.members([4, 2, 5]).but.not.have.ordered.members([5, 2, 1]);
     })
 })
+
 describe('Teste de data', function () {
     it('Calcula a diferença de uma data passa para atual em dias', () => {
         let resultado = Calculadora.data("2010", "07", "05")

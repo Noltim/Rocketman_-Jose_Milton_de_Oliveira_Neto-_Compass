@@ -13,6 +13,9 @@ export default class Calculadora {
     };
 
     static div(a, b) {
+        if( b == 0){
+            return "não é possivel dividir por 0"
+        }else
         return a / b;
     };
 
