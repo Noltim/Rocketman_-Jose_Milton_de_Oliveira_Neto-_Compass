@@ -1,4 +1,3 @@
-import assert from "assert/strict";
 import chai from "chai";
 import Calculadora from "../src/Calculadora.js";
 
@@ -62,7 +61,7 @@ describe('Testes de divisão', () => {
         let resultado = Calculadora.div(4, -5)
         expect(resultado).to.be.eq(-0.8)
     })
-    it('Deve dividir 4 e -5 resultado em não é possivel', () => {
+    it('Deve dividir 4 e 0 resultado em "não é possivel dividir por 0"', () => {
         let resultado = Calculadora.div(4, 0)
         expect(resultado).to.be.eq("não é possivel dividir por 0")
     })
@@ -98,9 +97,8 @@ describe('Testes de radicação', () => {
     })
     it('A raiz 5 de -32 resultando em -2', () => {
         let resultando = Calculadora.rad(-32, 5);
-        console.log(Calculadora.rad(-32, 5))
         expect(resultando).to.be.eq("Não é possível extrair raiz quadrada de um número negativo no conjunto dos números reais.")
-    }) //--------------- verificar pq esta dando NAN------------------------ PS mesmo usando função do JS fica dando NAN
+    }) 
 })
 
 describe('Teste de retorno do maior, menor ou  igual', () => {
@@ -119,14 +117,19 @@ describe('Teste de retorno do maior, menor ou  igual', () => {
 })
 
 describe('Teste de calculo do raio', () => {
-    it('Quando a circunferência for 3 o raio  será 0.47770700636942676', () => {
+    it('Quando a circunferência for 3 o raio será 0.47770700636942676', () => {
         let resultado = Calculadora.raio(3)
         expect(resultado).to.be.eq(0.47770700636942676)
     })
+    it('Quando a circunferência for dado em fração 1/5 o raio será 0.03184713375796178', () => {
+        let resultado = Calculadora.raio(1 / 5)
+        expect(resultado).to.be.eq(0.03184713375796178)
+    })
+
 })
 
-describe('Teste de calcular a area', function (){
-    it('A area deve ser de ', function () {
+describe('Teste de calcular a area', function () {
+    it('A area deve ser de 28.26 ', function () {
         let resultado = Calculadora.area(3)
         expect(resultado).to.be.equals(28.26)
 
@@ -147,7 +150,15 @@ describe('Teste  de array', () => {
 describe('Teste de data', function () {
     it('Calcula a diferença de uma data passa para atual em dias', () => {
         let resultado = Calculadora.data("2010", "07", "05")
-        expect(resultado).to.be.eq(4305 + " Dias")
+        expect(resultado).to.be.eq(4306 + " Dias")// o teste teve a data de 4306 pois foi feito no dia 19/05/2022. Por isso vai dar erro
+    })                                                  //vc precisa atulizar  para não dar
+    it('Escrevendo data fora do padrão resulta em dias', () => {
+        let resultado = Calculadora.data(2010, 7, 5)
+        expect(resultado).to.be.eq(4306 + " Dias")// o teste teve a data de 4306 pois foi feito no dia 19/05/2022. Por isso vai dar erro
+    })                                               //vc precisa atulizar  para não dar
+    it('Passando data negativa', () => {
+        let resultado = Calculadora.data("-1", "-2", "-3")
+        expect(resultado).to.be.eq("Desculpa não há data negativa")
     })
 
 })
@@ -157,6 +168,3 @@ describe('Teste de data', function () {
 
 
 
-
-// ps: Arrow function = () =>{}   \\||//   E function padrão é function(){}
-//usar ambos para não esquecer como fazer ambos

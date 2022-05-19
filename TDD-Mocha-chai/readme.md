@@ -20,4 +20,14 @@ para executar os testes você devera fazer os seguintes passos:
 4° abra o teste Calculadora.spec.js e digite no console o comando npm test para executar os testes.
 
 
+Testes:
 
+Todos os testes foram pensando levando em consideração possiveis tratamento que o usuario poderia ter ao
+manusear a aplicação.
+
+Uma resalva é valida para data enquanto dias passados. Quando executar o codigo será necessario corrigir 
+os dias decorridos até a presente data
+
+
+Em relação ao samples.spec.js foi deixado a cunho de aprendizado, pois ele foi a base para criação dos demais testes. Sua existência não
+causa conflito.

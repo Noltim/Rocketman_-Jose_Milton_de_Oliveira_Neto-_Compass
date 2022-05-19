@@ -41,7 +41,7 @@ describe("About Applying What We Have Learnt", function() {
 
       /* solve using filter() & all() / any() */
 
-      expect(productsICanEat.length).toBe(0); // pq aqui foi 0? Não entendi
+      expect(productsICanEat.length).toBe(0); 
   });
 
   /*********************************************************************************/

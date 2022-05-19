@@ -27,3 +27,5 @@
 //         expect(aux).to.not.deep.equals(["Cavalor, cobra, castro", 2, '$'])
 //     })
 // })
+
+//Aqui estão os teste ensinados na MasterClass
